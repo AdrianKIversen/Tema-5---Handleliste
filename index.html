@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <title> Kiwi handleliste</title>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css"> 
+    <script async src="./JS/script.js"></script>
+</head>
+
+
+<header>
+
+    <!--NAV MENU-->
+
+   <nav>
+        <img class="logo" src="./assets/kiwi-minipris-logo.svg">
+        
+        <ul>
+            <li>
+                <span class="icon" style="background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEwIDBjNC40MTEgMCA4IDMuNTYxIDggNy45MzggMCAzLjQ5NS0xLjgyNyA2LjE1MS0zLjY5NyA4LjU3Mi0uOTk4IDEuMjktMy41MzYgNC41MTUtMy41MzYgNC41MTVMMTAgMjJsLS43NjgtLjk3NVM2LjY5NSAxNy44IDUuNjk4IDE2LjUxQzMuODI3IDE0LjA5IDIgMTEuNDMzIDIgNy45MzggMiAzLjU2MSA1LjU4OCAwIDEwIDB6bTAgMS44NDljLTMuMzcgMC02LjExMiAyLjcyLTYuMTEyIDYuMDY0IDAgMi42NDYgMS4yMiA0Ljc0MyAzLjMyOCA3LjQ3LjY1Ljg0IDEuOTQ3IDIuNDk2IDIuNzg0IDMuNTZhNzI5LjA1IDcyOS4wNSAwIDAwMi43ODQtMy41NmMyLjEwOC0yLjcyNyAzLjMyOC00LjgyNCAzLjMyOC03LjQ3IDAtMy4zNDQtMi43NDEtNi4wNjQtNi4xMTItNi4wNjR6TTEwIDRhNCA0IDAgMTEwIDggNCA0IDAgMDEwLTh6bTAgMmEyIDIgMCAxMDAgNCAyIDIgMCAwMDAtNHoiIGZpbGw9IiMyRDMzNDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==);"> </span> 
+                <span class="text">FINN BUTIKK</span>
+            </li>
+            <li>
+                <span class="icon" style="background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTExLjc0IDFjMS45NSAwIDMuNDczIDEuNzUxIDMuNDczIDMuODQ4TDE1LjIxIDQuOGgzLjE0M2MxLjQzNyAwIDIuNTYgMS4yMyAyLjY0MSAyLjcyNUwyMSA3Ljd2OC42aC0uODI3VjIySC44Mjd2LTUuNzAySDBWNy43YzAtMS41NzMgMS4xNTMtMi44OTggMi42NDYtMi44OThoMy4xNDJDNS44MSAyLjcyMyA3LjMyNiAxIDkuMjYgMXptNi40NDggMTUuMjk4aC00Ljg3N3YuNzAxSDcuNjg5bC0uMDAxLS43MDFIMi44MTF2My43MDZoMTUuMzc4bC0uMDAxLTMuNzA2em0tNi4zNjUtMi4yOTNIOS4xNzd2MS40OTdoMi42NDZ2LTEuNDk3em02LjUzMS03LjIwOUgyLjY0NmMtLjMzMyAwLS42NjIuMzc4LS42NjIuOTAzdjYuNjA0aDUuNzA0bC4wMDEtMS43OTNoNS42MjJ2MS43OTNoNS43MDRWNy42OTljMC0uNDg1LS4yNzktLjg0NC0uNTg0LS44OTZsLS4wNzctLjAwN3ptLTYuNjE0LTMuOEg5LjI2Yy0uNzkgMC0xLjQ4OC44MDItMS40ODggMS44NTJsLjAwMS0uMDQ4aDUuNDUzbC0uMDAzLS4xMTVjLS4wNjUtLjkxNS0uNjYyLTEuNjA5LTEuMzU5LTEuNjgzbC0uMTI0LS4wMDd6IiBmaWxsPSIjMkQzMzQwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=);"></span> 
+                <span class="text">JOBB I KIWI</span>
+            </li>
+            <li>
+                <span class="icon" style="background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEwLjAyMyAwYTMuNjIgMy42MiAwIDAxMi42MzMgMS4xMjdsLjEzOC4xNTYuMDU1LjA3Yy4yMjQtLjA3NS40NTQtLjEyOC42ODgtLjE1OGwuMjM0LS4wMjMuMjM3LS4wMDdjMS45MDYgMCAzLjQ3IDEuNDYgMy41NyAzLjI5NmwuMDA1LjE4NS0uMDA2LjE0NS4xNS4wNTJjMS4yMi40NjUgMi4xMDYgMS41NjQgMi4yNTIgMi44NjJsLjAxNi4xOTYuMDA1LjE4MWMwIC44Mi0uMjk4IDEuNjAzLS44MjUgMi4yMjJsLS4xNDkuMTY0LS4xMDQuMS4wMjMuMjE1LjAwOC4yM2MwIDEuNjc0LTEuMjE4IDMuMDcyLTIuODMzIDMuNDA1bC0uMTgyLjAzMi0uMS4wMTMtLjA1Ny4wOTVhMy42MiAzLjYyIDAgMDEtMi42MjEgMS42MTRsLS4yMTcuMDE4LS4xOTQuMDA2YTMuNjQgMy42NCAwIDAxLTEuMjA4LS4yMDVsLS4yMjgtLjA4OC0uMDYyLS4wMy0uMDE4IDQuNDU5aDMuNDA4VjIyaC04Ljc3di0xLjY2N2wzLjY4LS4wMDF2LTMuNTY4bC0uMTE2LjAyNi0uMjIuMDM0LS4yMjIuMDIxLS4yMjUuMDA3YTMuNjI1IDMuNjI1IDAgMDEtMi45MjItMS40OGwtLjExOS0uMTc1LS4wNzYtLjEyNy0uMDUyLjAwNS0uMjIzLjAwN2MtMS45NyAwLTMuNTc0LTEuNTU4LTMuNTc0LTMuNDggMC0uMjg5LjAzNy0uNTc1LjExLS44NTNsLjA2LS4yMDcuMDItLjA1NS0uMDItLjAyYTMuNDQ0IDMuNDQ0IDAgMDEtLjk0NS0xLjk1N2wtLjAyLS4yMjJMMSA4LjA4MmMwLTEuMTc2LjYxNi0yLjI1NCAxLjU4Ni0yLjg4OWwuMTc1LS4xMDcuMDc2LS4wNDItLjAxOC0uMTg4LS4wMDctLjIxYzAtMS45MjMgMS42MDYtMy40ODEgMy41NzUtMy40ODEuMTY4IDAgLjMzNC4wMTEuNDk4LjAzNGwuMjQ1LjA0Mi4xMy4wMzIuMDE0LS4wMTVBMy41ODQgMy41ODQgMCAwMTkuNTk3LjAyNWwuMjEyLS4wMTkuMjE0LS4wMDZ6bTAgMS42NzNjLS42NTYgMC0xLjI1LjMyNC0xLjU5Ljg1NWwtLjA4LjEzNy0uMzgzLjcyNi0uNzQ3LS4zNmExLjkwNCAxLjkwNCAwIDAwLS44MzctLjE5M2MtMS4wMzUgMC0xLjg3My44MTQtMS44NzMgMS44MDggMCAuMTUyLjAyLjMwNS4wNjMuNDU3bC4wNDguMTUuMzE2Ljg0OS0uODgzLjI0NWMtLjc5OS4yMi0xLjM1Ny45MzgtMS4zNTcgMS43MzUgMCAuNTM4LjI1IDEuMDQ2LjY3NiAxLjM5bC4xMzMuMDk3LjY2NC40NDQtLjQxMy42NzdhMS43NTcgMS43NTcgMCAwMC0uMjU4LjkxMWMwIC45OTQuODM5IDEuODA5IDEuODc0IDEuODA5LjEyMSAwIC4yNDMtLjAxMi4zNjMtLjAzNWwuMTc5LS4wNDMuODEtLjIzNy4yNDUuNzk1Yy4yMzQuNzU1Ljk3NSAxLjI5IDEuNzk1IDEuMjkuMjI3IDAgLjQ0OC0uMDQuNjU1LS4xMTRsLjEyOS0uMDU0di0uOTczTDUuMjYgOS44NzNsMS4yMTEtMS4xNzUgMy4wOCAyLjk5VjguODQxTDcuMTg3IDYuNTQ0bDEuMjEtMS4xNzUgMS4xNSAxLjExNnYtLjEwNmwuMDA2LS4wMzhWNC4wNDJoMS43djEuMzE2bDEuMDItMS4wMTggMS4yMTEgMS4xNzYtMi4yMyAyLjIyMVY5LjZMMTQuMyA2LjY0M2wxLjIxIDEuMTc1LTQuMjU4IDQuMTMydjEuOTI0bC4zMzQuMjU2YTEuODkgMS44OSAwIDAwMS4xNjMuMzkzYy43MiAwIDEuMzgzLS40MTMgMS42OS0xLjAzNGwuMDYtLjEzNi4yMTgtLjU1OC42NjYuMDI1LjE0Mi0uMDA1Yy45MTgtLjA3IDEuNjUtLjc4IDEuNzIxLTEuNjYybC4wMDYtLjE0YzAtLjExNy0uMDEyLS4yMzQtLjAzNi0uMzQ5bC0uMDQ0LS4xNzItLjE4LS41ODMuNTEtLjM0OWMuNS0uMzQuNzk3LS44OTMuNzk4LTEuNDc4IDAtLjg5Ny0uNjkzLTEuNjU5LTEuNjA1LTEuNzg2bC0uMTQ2LS4wMTUtMS4wODgtLjA3LjMzNC0xLjAyYy4wNTgtLjE3Ny4wODctLjM2LjA4Ny0uNTQ1IDAtLjk5NC0uODM5LTEuODA4LTEuODc0LTEuODA4LS4zMDQgMC0uNi4wNy0uODY4LjIwN2wtLjE1Ny4wOS0uODM4LjUzLS40MDEtLjg5OGExLjg3NyAxLjg3NyAwIDAwLTEuNzIyLTEuMDk0eiIgZmlsbD0iIzJEMzM0MCIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+);"></span>
+                <span class="text">BÆREKRAFT</span> 
+            </li>   
+
+            <div class = "vertical"></div> 
+
+            <div>
+                <span class="saldo">Hei, Adrian</span>
+                <br>
+                <span class="saldo">Trumf-saldo: 1000</span>
+            </div>
+
+            <img class="pil" src="./assets/pilned.svg">
+
+            <img class="søk" src="./assets/søk.svg"> 
+
+            <img class="burger" src="./assets/burger.svg"> 
+
+            <img class="bag" src="./assets/bag.svg">
+                
+            
+     </ul>
+
+     <img class="burger-iphone" src="./assets/burgers.svg"> 
+
+    </nav>
+
+    
+</header>
+
+
+<body>
+
+    <!--HERO SECTION--> 
+
+    <div class = "vertical1"></div>
+
+    <p>SØK ETTER VARE</p>  
+
+
+    <div class="shopping-list">
+       
+        
+        
+        <form>
+            <input type="text" id="new-item" placeholder="Søk vare..." autocomplete="off">
+          <button type="submit">+</button>
+          <button id= clear-all> Tøm</button>  
+          <!-- <img class="fav" src="assets/fav1.svg"> -->
+        </form>
+        <div class="item-container">
+        </div>
+        
+        
+      </div>
+
+     
+    
+
+</body>
+
+
+
+</html> 
