@@ -1,4 +1,5 @@
   
+
     const shoppingList = document.querySelector(".item-container");
     const addButton = document.querySelector("form button");
     const newItemInput = document.querySelector("form input");
